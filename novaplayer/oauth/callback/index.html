@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>NovaPlayer 授权回调</title>
+<link rel="stylesheet" href="../../assets.css">
+</head>
+<body>
+<main>
+  <nav><a href="../../">NovaPlayer</a></nav>
+  <h1>正在返回 NovaPlayer</h1>
+  <p class="lead" id="message">授权结果仅在本机浏览器中中转，不会上传到 GitHub Pages。</p>
+  <div class="card">
+    <p>如果没有自动返回，请<a id="continue" href="novaplayer://oauth">手动打开 NovaPlayer</a>。</p>
+  </div>
+</main>
+<script>
+(() => {
+  const fragment = window.location.hash.startsWith("#")
+    ? window.location.hash.slice(1)
+    : "";
+  const auth = new URLSearchParams(fragment);
+  const query = new URLSearchParams(window.location.search);
+
+  for (const [name, value] of query) {
+    if (!auth.has(name)) auth.set(name, value);
+  }
+
+  const hasResult = auth.has("access_token") || auth.has("error");
+  if (!hasResult) {
+    document.getElementById("message").textContent =
+      "没有收到授权结果，请回到 NovaPlayer 重新发起登录。";
+    return;
+  }
+
+  const target = `novaplayer://oauth#${auth.toString()}`;
+  document.getElementById("continue").href = target;
+  window.location.replace(target);
+})();
+</script>
+</body>
+</html>
