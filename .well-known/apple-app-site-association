@@ -1,0 +1,22 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "92HUDNQN9U.com.novaplayer.ios"
+        ],
+        "components": [
+          {
+            "/": "/oauth/baidu",
+            "comment": "NovaPlayer Baidu OAuth callback"
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "92HUDNQN9U.com.novaplayer.ios"
+    ]
+  }
+}
