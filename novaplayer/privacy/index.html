@@ -1,72 +1,379 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NovaPlayer — Privacy Policy</title>
-<link rel="stylesheet" href="../assets.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn how NovaPlayer accesses, uses, stores, shares, retains and deletes data, including Google Drive user data.">
+  <meta name="theme-color" content="#0b0b10">
+  <meta name="robots" content="index,follow">
+  <meta property="og:site_name" content="NovaPlayer">
+  <meta property="og:title" content="NovaPlayer — Privacy Policy">
+  <meta property="og:description" content="How NovaPlayer accesses, uses, stores, shares, retains and deletes data, including Google Drive user data.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.light8.cn/appsite/novaplayer/privacy/">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://www.light8.cn/appsite/novaplayer/privacy/">
+  <title>NovaPlayer — Privacy Policy</title>
+  <link rel="stylesheet" href="../assets.css">
+  <link rel="stylesheet" href="policy.css">
 </head>
-<body>
-<main>
-  <nav><a href="../">NovaPlayer</a><a href="../support/">Support</a></nav>
-  <h1>Privacy Policy</h1>
-  <p class="lead">NovaPlayer works without a NovaPlayer account. Your media is not uploaded to the developer.</p>
-  <p><em>Last updated: 18 October 2026 · applies to NovaPlayer 1.0 and later.</em></p>
+<body class="policy-page">
+  <a class="skip-link" href="#policy-content">Skip to policy</a>
 
-  <h2>What we collect</h2>
-  <p><strong>The developer does not collect personal data through a NovaPlayer account or media relay service.</strong> NovaPlayer does not include developer-operated advertising, analytics or crash-reporting SDKs. We do not collect your media files, viewing history, saved passwords or OAuth tokens.</p>
+  <header class="policy-header">
+    <a class="policy-brand" href="../" aria-label="NovaPlayer home">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="12"/>
+        <path d="M15.2 11.9v16.2L28 20 15.2 11.9Z" class="play"/>
+        <path d="m9 20 6.2-3.7v7.4L9 20Z" class="play-muted"/>
+      </svg>
+      <span>NovaPlayer</span>
+    </a>
+    <nav aria-label="Privacy policy navigation">
+      <a href="../">App home</a>
+      <a href="#google-data">Google data</a>
+      <a href="../support/">Support</a>
+      <a class="header-policy-link" href="#policy-content">Privacy Policy</a>
+    </nav>
+  </header>
 
-  <h2>Where your data is stored</h2>
-  <table>
-    <tr><th>Data</th><th>Location and destination</th></tr>
-    <tr><td>Media files</td><td>Remain on the local folder, NAS, media server or cloud drive you configure. Playback requests go directly to that source.</td></tr>
-    <tr><td>Library, progress, favorites and settings</td><td>Stored locally. If you explicitly enable Pro sync, supported data is stored in your private iCloud database controlled by your Apple Account.</td></tr>
-    <tr><td>Server passwords and cloud OAuth tokens</td><td>Stored in Apple Keychain and sent only to the server or provider you configure.</td></tr>
-    <tr><td>Scan checkpoints and cloud cursors</td><td>Stored locally as rebuildable data. They are excluded from iCloud backup and protected with file permissions.</td></tr>
-  </table>
+  <main class="policy-main" id="policy-content">
+    <header class="policy-hero">
+      <p class="policy-eyebrow">NovaPlayer · Privacy</p>
+      <h1>Privacy Policy</h1>
+      <p class="policy-lead">This policy explains what NovaPlayer accesses, why it uses that data, where the data is stored, when it is shared, and how you can delete it or revoke access.</p>
+      <p class="policy-date"><strong>Last updated:</strong> 14 November 2026<br><strong>Applies to:</strong> NovaPlayer 1.0 and later on iOS, iPadOS, macOS and tvOS.</p>
+      <div class="language-switch" aria-label="Policy language">
+        <a href="#english">English</a>
+        <a href="#chinese">简体中文</a>
+      </div>
+    </header>
 
-  <h2>Network requests</h2>
-  <p>NovaPlayer makes network requests to sources you add, TMDB for metadata and artwork, Apple services used by the app, iCloud when private sync is enabled, and the App Store for purchases. TMDB requests may include media titles or identifiers but never include your media files.</p>
+    <section class="policy-summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">The short version</h2>
+      <ul>
+        <li>NovaPlayer works without a NovaPlayer account.</li>
+        <li>Your media files are not uploaded to a developer-operated server and are never sold.</li>
+        <li>Google Drive is accessed only after you choose to connect it. NovaPlayer requests read-only Drive access, never write access.</li>
+        <li>Google user data is not used for advertising, profiling, sale, or AI training.</li>
+        <li>NovaPlayer does not generate or edit images and does not create or distribute AI-generated NCII.</li>
+        <li>Source credentials are kept in Apple Keychain. Optional Pro sync uses your private iCloud database controlled by your Apple Account.</li>
+      </ul>
+    </section>
 
-  <h2>Deleting data</h2>
-  <p>Deleting a source in NovaPlayer also requests deletion of its Keychain credential. Uninstalling the app removes its local app-container database, but Apple does not guarantee that Keychain entries are removed. Remove sources in the app first if you want their credentials deleted. Private iCloud data can be removed through the app and Apple iCloud settings.</p>
+    <section class="policy-section" id="english" aria-labelledby="english-title">
+      <div class="language-heading">
+        <p>English</p>
+        <h2 id="english-title">NovaPlayer Privacy Policy</h2>
+      </div>
 
-  <h2>Tracking and children</h2>
-  <p>NovaPlayer does not use your data for advertising or cross-app tracking. The app does not collect data from anyone, including children, and is rated 4+.</p>
+      <section class="policy-block" id="scope">
+        <h3>1. Scope and responsibility</h3>
+        <p>This policy applies to the NovaPlayer application for iOS, iPadOS, macOS and tvOS and to the website at <code>/novaplayer/</code>. NovaPlayer is the app identified in the App Store as <code>com.novaplayer.ios</code>. References to “NovaPlayer,” “we,” or “us” mean the developer distributing this app. Questions or privacy requests can be submitted through the <a href="../support/">NovaPlayer support page</a>.</p>
+        <p>NovaPlayer is a player for media you own or are authorized to access. It does not provide media, operate a media relay, or bypass DRM. You choose every local, network, server or cloud source that the app can access.</p>
+      </section>
 
-  <h2>Contact</h2>
-  <p>Questions about this policy: <a href="../support/">visit the support page</a>.</p>
+      <section class="policy-block" id="google-data">
+        <div class="section-kicker">Google API disclosure</div>
+        <h3>2. How NovaPlayer accesses Google user data</h3>
+        <p>NovaPlayer contacts Google only after you select Google Drive and complete Google’s authorization screen. The permission you grant is read-only. NovaPlayer does not request Gmail, Calendar, Contacts, Google profile, email address, or identity scopes.</p>
 
-  <hr>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Platform</th>
+                <th scope="col">Google scope</th>
+                <th scope="col">What it permits</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>iOS, iPadOS and macOS</td>
+                <td><code>drive.readonly</code></td>
+                <td>Read-only access to Google Drive file metadata and content so NovaPlayer can build and play your library. NovaPlayer cannot create, edit, move, share or delete Drive files with this scope.</td>
+              </tr>
+              <tr>
+                <td>tvOS</td>
+                <td><code>drive.file</code></td>
+                <td>Access limited to Google Drive files that Google makes available to NovaPlayer under this scope. It does not grant drive-wide read-only access.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-  <h2>隐私政策（简体中文）</h2>
-  <p>最后更新：2026-10-18，适用于 NovaPlayer 1.0 及以后版本。</p>
-  <p><strong>NovaPlayer 无需注册 NovaPlayer 账号；开发者不会通过账号或媒体中继服务收集你的个人数据。</strong></p>
+        <h4>Google data NovaPlayer reads</h4>
+        <p>Depending on the source and the operation you request, NovaPlayer may read:</p>
+        <ul>
+          <li>Google Drive file identifiers, file and folder names, MIME type, size, modification date, parent folder identifiers and trashed state;</li>
+          <li>video file content, through byte-range requests, when you browse or play a selected video;</li>
+          <li>sidecar files such as NFO metadata, posters, fanart and backdrop images, when present;</li>
+          <li>Google OAuth access and refresh tokens returned after you authorize the app; and</li>
+          <li>pagination and change-notification tokens needed to scan efficiently and detect changed, removed or renamed items.</li>
+        </ul>
 
-  <h3>我们收集什么</h3>
-  <p>NovaPlayer 不包含开发者运营的广告、分析或崩溃上报 SDK。我们不收集你的媒体文件、观看历史、保存的密码或 OAuth 令牌。</p>
+        <h4>How NovaPlayer uses Google user data</h4>
+        <ul>
+          <li>Authenticate your Google Drive connection and refresh expired access tokens;</li>
+          <li>list and index supported media and artwork files that you have chosen to make available;</li>
+          <li>present titles, artwork, folder relationships, progress and source information in your library;</li>
+          <li>stream the media you select and support resuming playback;</li>
+          <li>perform incremental rescans and identify files that were added, changed, removed or renamed; and</li>
+          <li>diagnose failures using stable error codes while masking credentials and private paths.</li>
+        </ul>
 
-  <h3>数据保存在哪里</h3>
-  <table>
-    <tr><th>数据</th><th>位置与去向</th></tr>
-    <tr><td>媒体文件</td><td>保留在你配置的本地文件夹、NAS、媒体服务器或云盘中；播放请求直接发往该来源。</td></tr>
-    <tr><td>媒体库、进度、收藏与设置</td><td>默认保存在本机。只有你主动开启 Pro 同步后，受支持的数据才会进入由你的 Apple 账号控制的 iCloud 私有数据库。</td></tr>
-    <tr><td>服务器密码与云盘 OAuth 令牌</td><td>保存在 Apple 钥匙串，只会发送给你配置的服务器或服务商。</td></tr>
-    <tr><td>扫描检查点与云盘 cursor</td><td>作为可重建数据保存在本机，排除 iCloud 备份并受文件权限保护。</td></tr>
-  </table>
+        <h4>Limits on use</h4>
+        <p>NovaPlayer does not use Google user data for advertising, personalized or retargeted marketing, profiling, eligibility decisions, credit or lending decisions, sale, data brokerage, or training generalized AI or machine-learning models. We do not allow humans to read your Google user data except when necessary for security, fraud prevention, legal compliance, or when you explicitly request support that requires it.</p>
 
-  <h3>网络请求</h3>
-  <p>NovaPlayer 会访问你添加的来源、用于元数据与海报的 TMDB、应用使用的 Apple 服务、开启私有同步后的 iCloud，以及 App Store。TMDB 请求可能包含影片标题或标识，但不会包含你的媒体文件。</p>
+        <h4>AI and NCII prohibition</h4>
+        <p>NovaPlayer does not provide generative image or video creation features. It does not create, alter, or distribute AI-generated non-consensual intimate imagery (NCII), and it does not use Google user data to train, fine-tune, or operate generative AI or machine-learning models. This prohibition applies to every use of NovaPlayer and to all data obtained through Google APIs.</p>
 
-  <h3>删除数据</h3>
-  <p>在应用中删除来源时，应用会同时请求删除对应的钥匙串凭据。卸载应用会移除 App 容器内的本地数据库，但 Apple 不保证卸载会清除钥匙串条目；如需删除凭据，请先在应用内删除来源。iCloud 私有数据可通过应用与 Apple iCloud 设置删除。</p>
+        <div class="policy-callout">
+          <strong>Google Limited Use</strong>
+          <p>NovaPlayer’s use and transfer to any other app of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+        </div>
+      </section>
 
-  <h3>跟踪与儿童隐私</h3>
-  <p>NovaPlayer 不将数据用于广告或跨 App 跟踪，不收集任何人的数据（包括儿童），年龄分级为 4+。</p>
+      <section class="policy-block" id="storage-sharing">
+        <div class="section-kicker">Storage, sharing and retention</div>
+        <h3>3. Where data is stored and how long it is kept</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Data</th>
+                <th scope="col">Storage</th>
+                <th scope="col">Retention and deletion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Google Drive files</td>
+                <td>Remain in your Google Drive. NovaPlayer may cache a small amount of playback data on your device, but does not upload media files to a developer-operated server.</td>
+                <td>Temporary playback cache is replaced during normal use and can be removed by clearing the app’s data or uninstalling the app.</td>
+              </tr>
+              <tr>
+                <td>Google OAuth access and refresh tokens</td>
+                <td>Apple Keychain on your device. If you enable Pro sync, supported source configuration and user-level credentials may also be mirrored to your private iCloud database.</td>
+                <td>Kept while the Google Drive source remains configured and authorization remains valid. Removed when you delete the source, revoke access, disable and clear Pro sync data, or otherwise reset the app’s credentials.</td>
+              </tr>
+              <tr>
+                <td>Google file metadata, library entries, playback progress, favorites and settings</td>
+                <td>NovaPlayer’s local app database. Supported library and preference data may sync to your private iCloud database when Pro sync is explicitly enabled.</td>
+                <td>Kept until the related source or item is removed and normal cleanup occurs, or until you delete the data or uninstall the app. Synced copies remain until sync data is deleted from NovaPlayer and Apple iCloud settings.</td>
+              </tr>
+              <tr>
+                <td>Scan checkpoints and Google changes cursors</td>
+                <td>Local app support storage with file-permission protection; excluded from iCloud backup.</td>
+                <td>Rebuildable operating data. Pagination and incremental checkpoints are discarded when stale, when their source is removed, or under the app’s scan-maintenance limits.</td>
+              </tr>
+              <tr>
+                <td>Temporary credential-pairing envelope</td>
+                <td>Encrypted and stored in your private iCloud database only if you explicitly create a Pro credential-pairing invitation.</td>
+                <td>Expires after at most 24 hours and is not intended for permanent storage.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-  <h3>联系我们</h3>
-  <p>隐私相关问题请访问<a href="../support/">支持页面</a>。</p>
-  <footer>© 2026 NovaPlayer · <a href="../support/">Support</a></footer>
-</main>
+        <h4>Sharing and third-party services</h4>
+        <ul>
+          <li><strong>Google:</strong> NovaPlayer sends authenticated API requests directly to Google to list files, refresh authorization and stream selected media. Google receives the information necessary to respond to those requests under Google’s own privacy policy.</li>
+          <li><strong>TMDB:</strong> To retrieve artwork and descriptive metadata, NovaPlayer may send a media title derived from a filename and related year or episode information to TMDB. It does not send Google OAuth tokens, your Google account identity, Google file identifiers, or media file content to TMDB.</li>
+          <li><strong>Apple:</strong> If you enable Pro sync or credential pairing, Apple stores the synced data in your private iCloud database. Apple processes App Store purchases and other Apple services used by the app.</li>
+          <li><strong>Your configured sources:</strong> Connection details and credentials may be sent only to the server or cloud provider you explicitly configure.</li>
+        </ul>
+        <p>We do not sell Google user data, share it with advertising networks or data brokers, or disclose it to any other third party for an unrelated purpose. We may disclose information if required by applicable law, but only to the extent legally required and subject to appropriate safeguards.</p>
+
+        <h4>Security</h4>
+        <p>NovaPlayer uses platform transport security for network requests, Apple Keychain for source credentials, the app sandbox for local storage, protected file permissions for rebuildable scan data, and logging rules that mask credentials and private paths. No storage or transmission method can be guaranteed completely secure, but we take reasonable steps to protect your data.</p>
+      </section>
+
+      <section class="policy-block" id="deletion">
+        <div class="section-kicker">Control and deletion</div>
+        <h3>4. Deleting data and revoking access</h3>
+        <ol>
+          <li><strong>Delete the Google Drive source in NovaPlayer.</strong> Open Settings → Media Sources &amp; Network → Sources, select the Google Drive source and delete it. NovaPlayer removes the related Keychain credential and local source data through its normal deletion flow.</li>
+          <li><strong>Revoke Google access.</strong> Visit <a href="https://myaccount.google.com/permissions">Google Account permissions</a> and remove NovaPlayer. Revoking access prevents future Drive API requests, although a copy may remain on your device until NovaPlayer removes the source or credential.</li>
+          <li><strong>Delete Pro sync data.</strong> Disable Pro sync and use NovaPlayer’s “Clear iCloud Data” control. You can also manage the app’s iCloud data in Apple iCloud settings.</li>
+          <li><strong>Uninstall NovaPlayer.</strong> This removes the app container and its local database, but Apple does not guarantee that Keychain items are removed. Delete cloud sources inside NovaPlayer before uninstalling if you want their stored credentials removed.</li>
+          <li><strong>Contact us.</strong> If you cannot find or delete data through the controls above, use the <a href="../support/">support page</a>. Do not post passwords, OAuth tokens, private media URLs or file contents publicly.</li>
+        </ol>
+      </section>
+
+      <section class="policy-block" id="changes">
+        <h3>5. Changes to this policy</h3>
+        <p>We review this policy when NovaPlayer’s data practices change. If a change materially affects how Google user data is accessed, used, stored, retained or shared, we will update the “Last updated” date and provide a notice in NovaPlayer before the change takes effect. Where required by Google policy or applicable law, we will request renewed consent before the new use begins.</p>
+      </section>
+
+      <section class="policy-block" id="tracking-children">
+        <h3>6. Tracking, AI safeguards, children and contact</h3>
+        <p>NovaPlayer does not use Google user data or other app data for advertising or cross-app tracking. The app does not contain developer-operated advertising, analytics or crash-reporting SDKs. NovaPlayer does not knowingly collect personal data from anyone, including children, and is rated 4+.</p>
+        <p>NovaPlayer does not generate or edit images and must not be used to create, modify or distribute AI-generated non-consensual intimate imagery. The app does not use Google API data to train or operate generative AI models.</p>
+        <p>Privacy questions and requests can be submitted through the <a href="../support/">NovaPlayer support page</a>.</p>
+      </section>
+    </section>
+
+    <hr class="policy-divider">
+
+    <section class="policy-section policy-language-cn" id="chinese" lang="zh-Hans" aria-labelledby="chinese-title">
+      <div class="language-heading">
+        <p>简体中文</p>
+        <h2 id="chinese-title">NovaPlayer 隐私政策</h2>
+      </div>
+
+      <section class="policy-block">
+        <h3>1. 适用范围与责任主体</h3>
+        <p>本政策适用于 iOS、iPadOS、macOS、tvOS 上的 NovaPlayer 应用及 <code>/novaplayer/</code> 网站。NovaPlayer 在 App Store 中的 Bundle ID 为 <code>com.novaplayer.ios</code>。本政策中的“NovaPlayer”“我们”指发布该应用的开发者。隐私问题或数据请求可通过<a href="../support/">支持页</a>提交。</p>
+        <p>NovaPlayer 仅用于播放你拥有或已获授权访问的媒体，不提供媒体内容、不运营媒体中继服务，也不绕过 DRM。所有本地目录、网络共享、媒体服务器或云盘来源均由你主动添加。</p>
+      </section>
+
+      <section class="policy-block">
+        <div class="section-kicker">Google API 数据披露</div>
+        <h3>2. NovaPlayer 如何访问 Google 用户数据</h3>
+        <p>只有当你选择 Google Drive 并完成 Google 授权页面后，NovaPlayer 才会访问 Google 数据。授予应用的权限为只读。NovaPlayer 不申请 Gmail、日历、联系人、Google 个人资料、电子邮箱或身份权限。</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">平台</th>
+                <th scope="col">Google scope</th>
+                <th scope="col">授权范围</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>iOS、iPadOS、macOS</td>
+                <td><code>drive.readonly</code></td>
+                <td>只读访问 Google Drive 文件元数据与内容，用于建立媒体库并播放媒体。该 scope 不允许 NovaPlayer 创建、修改、移动、共享或删除 Drive 文件。</td>
+              </tr>
+              <tr>
+                <td>tvOS</td>
+                <td><code>drive.file</code></td>
+                <td>仅访问 Google 按该 scope 提供给 NovaPlayer 的 Drive 文件，不授予整个 Drive 的只读访问权限。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>NovaPlayer 会读取哪些 Google 数据</h4>
+        <p>根据你使用的来源和操作，NovaPlayer 可能读取：</p>
+        <ul>
+          <li>Google Drive 文件标识、文件与文件夹名称、MIME 类型、大小、修改时间、父文件夹标识及回收站状态；</li>
+          <li>当你浏览或播放选定视频时，通过字节范围请求读取视频内容；</li>
+          <li>来源中存在的 NFO 元数据、海报、fanart 与背景图等附属文件；</li>
+          <li>你完成授权后 Google 返回的 OAuth access token 与 refresh token；</li>
+          <li>用于分页扫描、增量变化检测和识别新增、修改、删除或重命名文件的游标与变更令牌。</li>
+        </ul>
+
+        <h4>Google 用户数据的用途</h4>
+        <ul>
+          <li>验证 Google Drive 连接并在 access token 过期后刷新授权；</li>
+          <li>列出并索引你选择提供的受支持媒体与海报文件；</li>
+          <li>在媒体库中展示标题、海报、文件夹关系、播放进度与来源信息；</li>
+          <li>播放你选择的媒体并支持继续播放；</li>
+          <li>执行增量扫描，识别新增、修改、删除或重命名的文件；</li>
+          <li>使用稳定错误码排查故障，同时遮蔽凭据与私密路径。</li>
+        </ul>
+
+        <h4>禁止用途</h4>
+        <p>NovaPlayer 不会将 Google 用户数据用于广告、个性化或再营销、用户画像、资格判断、信用或贷款决策、出售、数据经纪，也不会用于训练通用 AI 或机器学习模型。除安全防护、欺诈防范、遵守法律或你明确请求且处理支持问题所必需的情形外，我们不允许人工读取你的 Google 用户数据。</p>
+
+        <h4>禁止 AI 与 NCII 用途</h4>
+        <p>NovaPlayer 不提供生成式图像或视频创作功能，不会创建、修改或传播 AI 生成的未经当事人同意的私密图像（NCII），也不会使用 Google 用户数据训练、微调或运行生成式 AI 或机器学习模型。该禁令适用于 NovaPlayer 的所有使用场景及通过 Google API 获得的所有数据。</p>
+
+        <div class="policy-callout">
+          <strong>Google Limited Use</strong>
+          <p>NovaPlayer 对从 Google API 获得的信息的使用与向其他应用转移，遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>，包括 Limited Use 要求。</p>
+        </div>
+      </section>
+
+      <section class="policy-block">
+        <div class="section-kicker">保存、共享与保留期限</div>
+        <h3>3. 数据保存在哪里、保留多久</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">数据</th>
+                <th scope="col">保存位置</th>
+                <th scope="col">保留与删除</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Google Drive 文件</td>
+                <td>保留在你的 Google Drive 中。NovaPlayer 可能在本机缓存少量播放数据，但不会把媒体文件上传到开发者服务器。</td>
+                <td>临时播放缓存会在正常使用过程中替换；可通过清除 App 数据或卸载 App 删除。</td>
+              </tr>
+              <tr>
+                <td>Google OAuth access token 与 refresh token</td>
+                <td>保存在设备 Apple 钥匙串。主动开启 Pro 同步后，受支持的来源配置与用户级凭据还可能镜像到你的 iCloud 私有数据库。</td>
+                <td>在 Google Drive 来源保持配置且授权有效期间保留。删除来源、撤销授权、关闭并清除 Pro 同步数据或重置 App 凭据时删除。</td>
+              </tr>
+              <tr>
+                <td>Google 文件元数据、媒体库条目、播放进度、收藏与设置</td>
+                <td>保存在 NovaPlayer 本地数据库。主动开启 Pro 同步后，受支持的媒体库与偏好数据可能同步到你的 iCloud 私有数据库。</td>
+                <td>保留至相关来源或条目被删除并完成正常清理，或至你删除数据、卸载 App。iCloud 副本保留至你在 NovaPlayer 和 Apple iCloud 设置中删除同步数据。</td>
+              </tr>
+              <tr>
+                <td>扫描检查点与 Google Changes 游标</td>
+                <td>保存在本机 App 支持目录，受文件权限保护并排除在 iCloud 备份之外。</td>
+                <td>属于可重建运行数据；在过期、来源被删除或达到 App 扫描维护期限后清除。</td>
+              </tr>
+              <tr>
+                <td>临时凭据配对信封</td>
+                <td>仅当你主动创建 Pro 凭据配对邀请时，加密存储在你的 iCloud 私有数据库。</td>
+                <td>最多保留 24 小时，不用于长期存储。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>共享与第三方服务</h4>
+        <ul>
+          <li><strong>Google：</strong>NovaPlayer 直接向 Google 发送带授权的 API 请求，以列出文件、刷新授权和读取选定媒体。Google 会根据其隐私政策收到完成请求所必需的信息。</li>
+          <li><strong>TMDB：</strong>为获取海报和文字资料，NovaPlayer 可能向 TMDB 发送从文件名提取的媒体标题及年份、季集信息；不会发送 Google OAuth token、Google 账号身份、Google 文件标识或媒体文件内容。</li>
+          <li><strong>Apple：</strong>开启 Pro 同步或凭据配对后，Apple 会在你的 iCloud 私有数据库中存储同步数据。App Store 购买及其他 Apple 服务由 Apple 处理。</li>
+          <li><strong>你配置的来源：</strong>连接信息与凭据只会发送给你主动配置的服务器或云服务商。</li>
+        </ul>
+        <p>我们不会出售 Google 用户数据，不会将其提供给广告网络或数据经纪商，也不会为无关目的向其他第三方披露。只有在适用法律要求时，我们才可能在必要范围内披露信息，并采取适当保护措施。</p>
+
+        <h4>安全措施</h4>
+        <p>NovaPlayer 使用平台网络安全机制传输请求，使用 Apple 钥匙串保存来源凭据，通过 App 沙盒保存本地数据，对可重建扫描数据应用受保护的文件权限，并在日志中遮蔽凭据与私密路径。任何存储或传输方式都无法保证绝对安全，但我们会采取合理措施保护数据。</p>
+      </section>
+
+      <section class="policy-block">
+        <div class="section-kicker">控制与删除</div>
+        <h3>4. 删除数据与撤销授权</h3>
+        <ol>
+          <li><strong>在 NovaPlayer 中删除 Google Drive 来源。</strong>进入「设置 → 媒体源与网络 → 来源」，选择 Google Drive 来源并删除。NovaPlayer 会通过正常删除流程移除相关钥匙串凭据和本地来源数据。</li>
+          <li><strong>撤销 Google 授权。</strong>访问 <a href="https://myaccount.google.com/permissions">Google 账号权限页面</a>并移除 NovaPlayer。撤销后将无法继续发起 Drive API 请求；设备端副本可能在删除来源或凭据前仍然存在。</li>
+          <li><strong>删除 Pro 同步数据。</strong>关闭 Pro 同步并使用 NovaPlayer 的「清除 iCloud 数据」功能，也可在 Apple iCloud 设置中管理 App 的 iCloud 数据。</li>
+          <li><strong>卸载 NovaPlayer。</strong>这会移除 App 容器及本地数据库，但 Apple 不保证卸载会清除钥匙串条目。如需删除云盘凭据，请先在 App 内删除云盘来源。</li>
+          <li><strong>联系我们。</strong>如果无法通过上述功能找到或删除数据，请使用<a href="../support/">支持页</a>。请勿公开发布密码、OAuth token、私密媒体 URL 或文件内容。</li>
+        </ol>
+      </section>
+
+      <section class="policy-block">
+        <h3>5. 政策变更</h3>
+        <p>当 NovaPlayer 的数据处理方式发生变化时，我们会审查本政策。如果变更会实质影响 Google 用户数据的访问、使用、保存、保留或共享方式，我们会更新“最后更新”日期，并在变更生效前通过 NovaPlayer 发出通知。若 Google 政策或适用法律要求，我们会在新用途开始前重新征得你的同意。</p>
+      </section>
+
+      <section class="policy-block">
+        <h3>6. 跟踪、AI 保护、儿童与联系我们</h3>
+        <p>NovaPlayer 不会将 Google 用户数据或其他 App 数据用于广告或跨 App 跟踪。App 不包含开发者运营的广告、分析或崩溃上报 SDK。NovaPlayer 不会有意收集任何人的个人数据（包括儿童），年龄分级为 4+。</p>
+        <p>NovaPlayer 不生成或编辑图像，也不得用于创建、修改或传播 AI 生成的未经当事人同意的私密图像。App 不使用 Google API 数据训练或运行生成式 AI 模型。</p>
+        <p>隐私问题或数据请求请通过<a href="../support/">NovaPlayer 支持页</a>提交。</p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="policy-footer">
+    <a href="../">NovaPlayer</a>
+    <span>© 2026 NovaPlayer</span>
+    <a href="../support/">Support</a>
+  </footer>
 </body>
 </html>
